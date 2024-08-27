@@ -5,11 +5,12 @@ spring:
     username: root
     password:
 
-  jpa:
-    properties:
+logging:
+  level:
+    org:
       hibernate:
-        show_sql: true
-        format_sql: true
-        highlight_sql: true
-    hibernate:
-      ddl-auto: create
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
